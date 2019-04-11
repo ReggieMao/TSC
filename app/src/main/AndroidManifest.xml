@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ebei.tsc">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.ebei.tsc.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:roundIcon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:icon,android:allowBackup,android:name">
+
+        <!-- 极光推送相关-->
+        <receiver
+            android:name="com.ebei.tsc.service.JPushService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="com.ebei.tsc" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 微信相关-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:label="@string/app_name"
+            android:exported="true" />
+
+        <!-- 项目本身activity相关-->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.FindPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.CollectActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RemainDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.TradeDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.TransferActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MinerInActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MinerOutActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.UpdateLoginPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.UpdatePayPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.PayPwd1Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".activity.PayPwd2Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".activity.PayPwd3Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".activity.PayPwd4Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".activity.RemainInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.NoticeInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.NoticeListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.UserServiceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.OfficeWebActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.InviteFriendActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.VoteActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.VoteRecordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AppDownloadActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.INFBackActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

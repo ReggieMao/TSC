@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ebei.library.view.SwipeViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_gray"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_below="@+id/view"
+            android:weightSum="4">
+
+            <RadioButton
+                android:id="@+id/rb_wallet"
+                style="@style/TabButton"
+                android:drawableTop="@drawable/selector_rb_wallet"
+                android:layout_marginTop="7dp"
+                android:text="@string/wallet"
+                android:textSize="11sp"
+                android:textColor="@drawable/selector_rb_text"/>
+
+            <RadioButton
+                android:id="@+id/rb_mineral"
+                style="@style/TabButton"
+                android:drawableTop="@drawable/selector_rb_mineral"
+                android:layout_marginTop="7dp"
+                android:text="@string/mineral"
+                android:textSize="11sp"
+                android:textColor="@drawable/selector_rb_text"/>
+
+            <RadioButton
+                android:id="@+id/rb_message"
+                style="@style/TabButton"
+                android:drawableTop="@drawable/selector_rb_message"
+                android:layout_marginTop="7dp"
+                android:text="@string/message"
+                android:textSize="11sp"
+                android:textColor="@drawable/selector_rb_text"/>
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                style="@style/TabButton"
+                android:drawableTop="@drawable/selector_rb_mine"
+                android:layout_marginTop="7dp"
+                android:text="@string/mine"
+                android:textSize="11sp"
+                android:textColor="@drawable/selector_rb_text"/>
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/img_message"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:visibility="gone"
+            android:src="@drawable/bg_round_view_red"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
